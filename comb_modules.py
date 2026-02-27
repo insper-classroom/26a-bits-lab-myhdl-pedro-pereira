@@ -44,7 +44,7 @@ def exe2(q, a, b, c):
 
     @always_comb
     def comb():
-        q.next = a or b
+        q.next = (not b and not c) or (b and c)
 
     return instances()
 
